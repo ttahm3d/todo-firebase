@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap");
+
 *,
 *::after,
 *::before {
@@ -6,5 +8,6 @@
 
 body {
   margin: 0;
+  font-family: "Raleway", sans-serif;
   padding: 0;
 }

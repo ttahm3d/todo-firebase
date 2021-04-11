@@ -1,9 +1,10 @@
+import TodoList from "./components/TodoList/TodoList";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Firebase Todo App</h1>
+      <TodoList />
     </div>
   );
 }
