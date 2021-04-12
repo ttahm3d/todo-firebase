@@ -1,30 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Todo from "../Todo/Todo";
 import firebase from "firebase";
-import { useCollectionData } from "react-firebase-hooks/firestore";
 import { Header, TodoContainer, FormContainer } from "./TodoList.styles";
 import { AiOutlinePlusCircle } from "react-icons/ai";
-import { auth, firestore } from "../../firebase.config";
+import { db } from "../../firebase.config";
 
 const TodoList = () => {
-  const [todo, setTodo] = useState("");
-  const todosRef = firestore.collection(`users/${auth.currentUser.uid}/todos`);
+  const [input, setInput] = useState("");
+  const [todos, setTodos] = useState(null);
 
-  const [todos] = useCollectionData(todosRef);
+  useEffect(() => {
+    getTodos();
+  }, []); // blank to run only on first launch
 
+  function getTodos() {
+    db.collection("todos").onSnapshot(function (querySnapshot) {
+      setTodos(
+        querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          todo: doc.data().todo,
+          isDone: doc.data().isDone,
+        }))
+      );
+    });
+  }
+  console.log(todos);
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    setTodo("");
-    todosRef.add({
-      text: todo,
-      complete: false,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+    db.collection("todos").add({
+      todo: input,
+      isDone: false,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
-  };
 
-  const signOut = () => {
-    auth.signOut();
+    setInput("");
   };
 
   return (
@@ -34,27 +44,23 @@ const TodoList = () => {
           <h1>
             To<span>do</span>
           </h1>
-          <p onClick={signOut}>Sign out</p>
         </nav>
       </Header>
       <FormContainer>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            value={todo}
+            value={input}
             placeholder="What are you going to do?"
-            onChange={(e) => setTodo(e.target.value)}
+            onChange={(e) => setInput(e.target.value)}
           />
           <button type="submit">
             <AiOutlinePlusCircle />
           </button>
         </form>
       </FormContainer>
-
       <TodoContainer>
-        <Todo />
-        <Todo />
-        <Todo />
+        {todos && todos.map((todo) => <Todo key={todo.id} {...todo} />)}
       </TodoContainer>
     </div>
   );

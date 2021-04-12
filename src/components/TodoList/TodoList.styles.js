@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Header = styled.header`
   background: #1a1d24;
   color: #f2f3f4;
-
+  padding: 10px;
   nav {
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,8 @@ export const Header = styled.header`
 `;
 
 export const TodoContainer = styled.section`
-  width: 60vw;
+  max-width: 55vw;
+  width: 90vw;
   margin: 20px auto;
 `;
 
@@ -41,14 +42,13 @@ export const FormContainer = styled.section`
 		font-family: inherit;
 		outline: none;
 		background: #F2F2F2;
+    font-size:18px;
 		border: none;
-		width: 400px;
+		max-width: 500px;
+    width:90vw;
 	}
 
 	button {
-		padding: 10px;
-		outline: none;
-		background: #F2F2F2;
-		border: none;
+		display: none
 	}
 `;

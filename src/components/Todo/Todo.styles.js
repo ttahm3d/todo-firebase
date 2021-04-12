@@ -1,25 +1,20 @@
 import styled from "styled-components";
 
 export const TodoWrapper = styled.div`
-  margin: 10px;
-  box-shadow: 0 0 5px #f3f3f3;
-  padding: 15px;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #1a1d24;
 
-  p {
-    margin: 0;
-    font-size: 20px;
-  }
-
-  div {
-    display: flex;
-    font-size: 20px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-
-  div > * {
-    margin-left: 5px;
+  .buttons {
+    button {
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      background: none;
+      margin: 0 5px;
+      cursor: pointer;
+    }
   }
 `;
