@@ -8,6 +8,7 @@ export const TodoWrapper = styled.div`
   border-bottom: 1px solid #1a1d24;
 
   .buttons {
+    display: flex;
     button {
       font-size: 20px;
       font-weight: bold;

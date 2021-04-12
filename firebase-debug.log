@@ -1,0 +1,70 @@
+[debug] [2021-04-12T13:35:11.381Z] ----------------------------------------------------------------------
+[debug] [2021-04-12T13:35:11.386Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Taher\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-04-12T13:35:11.387Z] CLI Version:   9.9.0
+[debug] [2021-04-12T13:35:11.387Z] Platform:      win32
+[debug] [2021-04-12T13:35:11.387Z] Node Version:  v14.15.5
+[debug] [2021-04-12T13:35:11.451Z] Time:          Mon Apr 12 2021 19:05:11 GMT+0530 (India Standard Time)
+[debug] [2021-04-12T13:35:11.451Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-04-12T13:35:11.491Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-12T13:35:11.491Z] > authorizing via signed-in user (tahirahmedt97@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\code\react\todo-firebase
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using todo-app-158fe. 
+[debug] [2021-04-12T13:35:57.483Z] > refreshing access token with scopes: []
+[debug] [2021-04-12T13:35:57.484Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-12T13:35:57.797Z] <<< HTTP RESPONSE 200 {"date":"Mon, 12 Apr 2021 13:35:59 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-12T13:35:57.891Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/todo-app-158fe [none]
+[debug] [2021-04-12T13:35:58.294Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/todo-app-158fe 200
+[debug] [2021-04-12T13:35:58.295Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/todo-app-158fe {"projectId":"todo-app-158fe","projectNumber":"332786530732","displayName":"todo-app","name":"projects/todo-app-158fe","resources":{"hostingSite":"todo-app-158fe","storageBucket":"todo-app-158fe.appspot.com","locationId":"asia-south1"},"state":"ACTIVE"}
+[info] 
+=== Firestore Setup
+[debug] [2021-04-12T13:35:58.300Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-04-12T13:35:58.301Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-04-12T13:35:58.454Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 12 Apr 2021 13:36:00 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-12T13:35:58.515Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/todo-app-158fe/services/firestore.googleapis.com  
+ 
+[debug] [2021-04-12T13:36:00.022Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 12 Apr 2021 13:36:01 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-12T13:36:00.024Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/todo-app-158fe  
+ 
+[debug] [2021-04-12T13:36:00.632Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 12 Apr 2021 13:36:02 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-04-12T13:36:00.632Z] database_type: CLOUD_FIRESTORE
+[debug] [2021-04-12T13:36:00.634Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-12T13:36:00.634Z] > authorizing via signed-in user (tahirahmedt97@gmail.com)
+[debug] [2021-04-12T13:36:00.634Z] [iam] checking project todo-app-158fe for permissions ["firebase.projects.get"]
+[debug] [2021-04-12T13:36:00.635Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/todo-app-158fe:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-04-12T13:36:01.846Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 12 Apr 2021 13:36:03 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1127","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 

@@ -24,7 +24,7 @@ export const Header = styled.header`
 `;
 
 export const TodoContainer = styled.section`
-  max-width: 55vw;
+  max-width: 500px;
   width: 90vw;
   margin: 20px auto;
 `;
